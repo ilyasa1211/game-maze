@@ -30,8 +30,7 @@ def main():
         else:
             stack.pop()
 
-    printer = StdoutMazePrinter()
-    printer.Print(grid)
+    StdoutMazePrinter().Print(grid)
 
 
 if __name__ == "__main__":
