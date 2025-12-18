@@ -32,7 +32,6 @@ class Grid:
     def __init__(self, width: int, height: int) -> None:
         self.width = width
         self.height = height
-        # self.__cells = [Cell(col, row) for col in range(width) for row in range(height)]
         self.__cells = [Cell(col, row) for row in range(height) for col in range(width)]
 
     def GetCells(self) -> list[Cell]:
