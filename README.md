@@ -11,5 +11,6 @@ Current not playable, only generating maze with [backtracking method with stack]
 ## Run
 
 ```bash
-uv run main.py
+uv pip install -e .
+uv run -m maze
 ```
