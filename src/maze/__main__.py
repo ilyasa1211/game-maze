@@ -17,7 +17,7 @@ def main():
 
     while len(stack) > 0:
         cell = stack[-1]
-        neighbors = grid.GetNeighbors(cell)
+        neighbors = grid.GetNeighbors(cell, lambda neighbor: not neighbor.IsVisited())
 
         if len(neighbors) > 0:
             direction, neighbor = random.choice(neighbors)

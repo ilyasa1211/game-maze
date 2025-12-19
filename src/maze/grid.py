@@ -1,5 +1,6 @@
 from .cell import Cell
 from .enum import Direction
+from typing import Callable
 
 
 class Grid:
@@ -19,7 +20,7 @@ class Grid:
         idx = self.width * y + x
         return self.__cells[idx]
 
-    def GetNeighbors(self, cell: Cell) -> list[tuple[Direction, Cell]]:
+    def GetNeighbors(self, cell: Cell, filter: Callable[[Cell],bool] = lambda _: True) -> list[tuple[Direction, Cell]]:
         neighbors: list[tuple[Direction, Cell]] = []
 
         for dir in Direction:
@@ -27,7 +28,7 @@ class Grid:
 
             if 0 <= dx < self.width and 0 <= dy < self.height:
                 neighbor = self.GetCell(dx, dy)
-                if not neighbor.IsVisited():
+                if filter(neighbor):
                     neighbors.append((dir, neighbor))
 
         return neighbors
