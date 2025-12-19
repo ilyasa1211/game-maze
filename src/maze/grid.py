@@ -20,7 +20,9 @@ class Grid:
         idx = self.width * y + x
         return self.__cells[idx]
 
-    def GetNeighbors(self, cell: Cell, filter: Callable[[Cell],bool] = lambda _: True) -> list[tuple[Direction, Cell]]:
+    def GetNeighbors(
+        self, cell: Cell, filter: Callable[[Cell], bool] = lambda _: True
+    ) -> list[tuple[Direction, Cell]]:
         neighbors: list[tuple[Direction, Cell]] = []
 
         for dir in Direction:
