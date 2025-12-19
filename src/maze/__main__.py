@@ -3,7 +3,7 @@ import random
 from .grid import Grid
 from .cell import Cell
 from .enum import Wall
-from .printers.stdout import StdoutMazePrinter
+from .printer.stdout import StdoutMazePrinter
 
 
 def main():
