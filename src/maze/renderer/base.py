@@ -2,7 +2,7 @@ from ..grid import Grid
 from abc import abstractmethod
 
 
-class MazePrinter:
+class MazeRenderer:
     @abstractmethod
-    def Print(self, grid: Grid) -> None:
+    def Render(self, grid: Grid) -> None:
         pass

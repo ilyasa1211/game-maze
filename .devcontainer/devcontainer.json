@@ -15,7 +15,12 @@
 				"ms-toolsai.jupyter"
 			]
 		}
-	}
+	},
+	"runArgs": [
+		"--device=/dev/dri",
+		"--group-add=992",
+		"--group-add=226"
+	]
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
