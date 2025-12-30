@@ -1,6 +1,11 @@
-from ..grid import Grid
-from .base import MazeRenderer
-from ..enum import Wall
+from .grid import Grid
+from .enum import Wall
+from abc import abstractmethod
+
+class MazeRenderer:
+    @abstractmethod
+    def Render(self, grid: Grid) -> None:
+        pass
 
 
 class StdoutRenderer(MazeRenderer):

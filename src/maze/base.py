@@ -1,4 +1,4 @@
-from ..grid import Grid
+from .grid import Grid
 from abc import abstractmethod
 
 
